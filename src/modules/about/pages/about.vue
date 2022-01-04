@@ -1,6 +1,9 @@
 <route lang="json5">
 {
-  name: 'About'
+  name: 'About',
+  meta: {
+    layout: '404.layout'
+  }
 }
 </route>
 
