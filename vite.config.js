@@ -17,7 +17,8 @@ export default defineConfig({
       extensions: ['vue'],
       dirs: [
         { dir: 'src/modules/root/pages', baseRoute: '' },
-        { dir: 'src/modules/about/pages', baseRoute: '' }
+        { dir: 'src/modules/about/pages', baseRoute: '' },
+        { dir: 'src/modules/tran/pages', baseRoute: 'tran' }
       ]
     }),
     Layouts({
