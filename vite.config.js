@@ -18,7 +18,8 @@ export default defineConfig({
       dirs: [
         { dir: 'src/modules/root/pages', baseRoute: '' },
         { dir: 'src/modules/about/pages', baseRoute: '' },
-        { dir: 'src/modules/tran/pages', baseRoute: 'tran' }
+        { dir: 'src/modules/tran/pages', baseRoute: 'tran' },
+        { dir: 'src/modules/work/pages', baseRoute: 'work' }
       ]
     }),
     Layouts({
