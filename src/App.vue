@@ -25,8 +25,20 @@ import HelloWorld from '@/components/HelloWorld.vue';
   <router-view />
 </template>
 
-<style>
+<style lang="scss">
 @import '@/assets/base.css';
+
+header {
+  @include breakpoint.media(sm) {
+    color: color.$black;
+  }
+  @include breakpoint.media(md) {
+    color: color.$red-500;
+  }
+  @include breakpoint.media(lg) {
+    color: color.$blue-500;
+  }
+}
 
 #app {
   max-width: 1280px;
