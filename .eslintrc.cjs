@@ -16,9 +16,11 @@ module.exports = {
     'vue/setup-compiler-macros': true
   },
   rules: {
+    'vue/multi-word-component-names': 'off',
     'vue/script-setup-uses-vars': 'error',
     'vue/v-on-function-call': ['warn', 'never'],
     'vue/require-emit-validator': ['error'],
+    'vue/require-explicit-emits': ['error'],
     'vue/prefer-separate-static-class': ['error'],
     'vue/padding-line-between-blocks': ['error', 'always'],
     'vue/no-unused-refs': ['error'],
@@ -38,15 +40,7 @@ module.exports = {
     'vue/component-tags-order': [
       'error',
       {
-        order: ['script', 'route', 'template', 'style']
-      }
-    ],
-    'vue/html-button-has-type': [
-      'error',
-      {
-        button: true,
-        submit: true,
-        reset: true
+        order: ['route', 'script', 'template', 'style']
       }
     ]
   },
