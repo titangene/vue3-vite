@@ -1,3 +1,9 @@
+<route lang="json5">
+{
+  name: 'About'
+}
+</route>
+
 <template>
   <div class="about">
     <h1>This is an about page</h1>

@@ -1,19 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
+import generatedRoutes from 'virtual:generated-pages';
+import { setupLayouts } from 'virtual:generated-layouts';
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: () => import('@/modules/root/HomeView.vue')
-    },
-    {
-      path: '/about',
-      name: 'about',
-      component: () => import('@/modules/about/AboutView.vue')
-    }
-  ]
+  routes: setupLayouts(generatedRoutes)
 });
 
 export default router;
