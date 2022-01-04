@@ -1,0 +1,296 @@
+@use 'base/color';
+@use 'base/typography';
+
+// ref: https://github.com/twbs/bootstrap/blob/main/scss/_reboot.scss
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  font-size: typography.$font-size-base;
+  font-family: typography.$font-family-base;
+  font-weight: typography.$font-weight-base;
+  line-height: typography.$line-height-base;
+
+  color: color.$black;
+  background-color: color.$white;
+
+  // Prevent adjustments of font size after orientation changes in iOS.
+  -webkit-text-size-adjust: 100%;
+  // Change the default tap highlight to be completely transparent in iOS.
+  -webkit-tap-highlight-color: color.$black;
+}
+
+hr {
+  margin: 1rem 0;
+  border: 0;
+  border-top: 1px solid color.$black-25;
+}
+
+// ====================================
+// # headings & paragraphs
+
+%heading {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+
+  font-weight: 500;
+  line-height: typography.$line-height-base;
+}
+
+h1 {
+  @extend %heading;
+  font-size: 2.5rem;
+}
+
+h2 {
+  @extend %heading;
+  font-size: 2rem;
+}
+
+h3 {
+  @extend %heading;
+  font-size: 1.75rem;
+}
+
+h4 {
+  @extend %heading;
+  font-size: 1.5rem;
+}
+
+h5 {
+  @extend %heading;
+  font-size: 1.25rem;
+}
+
+h6 {
+  @extend %heading;
+  font-size: 1rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+// ====================================
+// # links
+
+a {
+  $link-color: color.$blue-500;
+
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: darken($link-color, 20%);
+  }
+}
+
+// ====================================
+// # list
+
+ol,
+ul {
+  padding-left: 2rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+// ====================================
+// # code
+
+pre,
+code {
+  font-size: 1rem;
+}
+
+pre {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  overflow: auto;
+
+  code {
+    font-size: inherit;
+  }
+}
+
+// ====================================
+// # figure
+
+figure {
+  margin: 0 0 1rem;
+}
+
+// ====================================
+// # image
+
+img,
+svg {
+  vertical-align: middle;
+}
+
+// ====================================
+// # table
+
+table {
+  border-collapse: collapse;
+}
+
+// ====================================
+// # forms
+
+label {
+  display: inline-block;
+}
+
+button {
+  border-radius: 0;
+
+  &:focus:not(:focus-visible) {
+    outline: 0;
+  }
+}
+
+// 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+//    controls in Android 4.
+// 2. Correct the inability to style clickable types in iOS and Safari.
+button,
+[type="button"], // 1
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; // 2
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+input,
+select,
+button,
+textarea {
+  // reset Firefox and Safari
+  margin: 0;
+
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+button,
+select {
+  // Remove the inheritance of text transform in Firefox
+  text-transform: none;
+}
+
+select {
+  // Remove the inheritance of word-wrap in Safari.
+  word-wrap: normal;
+
+  // Undo the opacity change from Chrome
+  &:disabled {
+    opacity: 1;
+  }
+}
+
+// Remove the dropdown arrow in Chrome from inputs built with datalists.
+// See https://stackoverflow.com/a/54997118
+[list]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+// Remove inner border and padding from Firefox, but don't restore the outline like Normalize.
+::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+textarea {
+  resize: none;
+}
+
+fieldset {
+  // Browsers set a default `min-width: min-content;` on fieldsets,
+  // unlike e.g. `<div>`s, which have `min-width: 0;` by default.
+  // So we reset that to ensure fieldsets behave more like a standard block element.
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+legend {
+  width: 100%;
+  padding: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  line-height: inherit;
+}
+
+// Fix height of inputs with a type of datetime-local, date, month, week, or time
+::-webkit-datetime-edit-fields-wrapper,
+::-webkit-datetime-edit-text,
+::-webkit-datetime-edit-minute,
+::-webkit-datetime-edit-hour-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-year-field {
+  padding: 0;
+}
+
+::-webkit-inner-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  // Correct the outline style in Safari.
+  outline-offset: -2px;
+}
+
+// Remove the inner padding in Chrome and Safari on macOS.
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+// Remove padding around color pickers in webkit browsers
+::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+// Inherit font family and line height for file input buttons
+::file-selector-button {
+  font: inherit;
+}
+
+::-webkit-file-upload-button {
+  font: inherit;
+  // Correct the inability to style clickable types in iOS and Safari.
+  -webkit-appearance: button;
+}
+
+// Remove border from iframe
+iframe {
+  border: 0;
+}
+
+// Always hide an element with the `hidden` HTML attribute.
+[hidden] {
+  display: none !important;
+}
