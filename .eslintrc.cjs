@@ -12,6 +12,7 @@ module.exports = {
     'vue/setup-compiler-macros': true
   },
   rules: {
+    'vue/script-setup-uses-vars': 'error',
     'vue/v-on-function-call': ['warn', 'never'],
     'vue/require-emit-validator': ['error'],
     'vue/prefer-separate-static-class': ['error'],
