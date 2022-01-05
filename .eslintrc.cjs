@@ -3,6 +3,7 @@ require('@rushstack/eslint-patch/modern-module-resolution');
 
 module.exports = {
   root: true,
+  ignorePatterns: ['dist'],
   parserOptions: {
     ecmaVersion: '2022',
     sourceType: 'module'

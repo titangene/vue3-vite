@@ -11,7 +11,8 @@ export default defineConfig({
   plugins: [
     vue(),
     eslintPlugin({
-      cache: false
+      cache: false,
+      exclude: ['dist']
     }),
     Pages({
       extensions: ['vue'],
