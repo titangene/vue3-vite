@@ -1,4 +1,4 @@
-<route lang="json5">
+<route>
 {
   name: 'TranOpenEdit'
 }
