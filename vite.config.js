@@ -55,5 +55,16 @@ export default defineConfig({
         `
       }
     }
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        // https://rollupjs.org/guide/en/#outputmanualchunks
+        manualChunks(id) {
+          if (id.includes('src/modules/tran')) return 'tran';
+          if (id.includes('src/modules/work')) return 'work';
+        }
+      }
+    }
   }
 });
