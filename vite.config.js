@@ -2,7 +2,7 @@ import { fileURLToPath } from 'url';
 
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import eslintPlugin from 'vite-plugin-eslint';
+import eslint from 'vite-plugin-eslint';
 import Pages from 'vite-plugin-pages';
 import Layouts from 'vite-plugin-vue-layouts';
 import legacy from '@vitejs/plugin-legacy';
@@ -11,7 +11,7 @@ import legacy from '@vitejs/plugin-legacy';
 export default defineConfig({
   plugins: [
     vue(),
-    eslintPlugin({
+    eslint({
       cache: false,
       exclude: ['dist']
     }),
