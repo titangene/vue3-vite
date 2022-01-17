@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.12.2",
+    "@vee-validate/rules": "^4.5.7",
     "axios": "^0.24.0",
     "dayjs": "^1.10.7",
     "js-cookie": "^3.0.1",
