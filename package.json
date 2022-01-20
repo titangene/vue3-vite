@@ -22,7 +22,8 @@
     "quasar": "^2.4.4",
     "vee-validate": "^4.5.7",
     "vue": "^3.2.26",
-    "vue-router": "^4.0.12"
+    "vue-router": "^4.0.12",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@cypress/vite-dev-server": "^2.2.2",
