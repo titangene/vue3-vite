@@ -17,6 +17,10 @@ module.exports = {
     'vue/setup-compiler-macros': true
   },
   rules: {
+    'no-unused-vars': [
+      'error',
+      { varsIgnorePattern: '^_', argsIgnorePattern: '^_' }
+    ],
     'vue/multi-word-component-names': 'off',
     'vue/script-setup-uses-vars': 'error',
     'vue/v-on-function-call': ['warn', 'never'],
