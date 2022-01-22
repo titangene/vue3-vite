@@ -72,6 +72,12 @@ export default defineConfig({
           if (id.includes('src/modules/work')) return 'work';
         }
       }
+    },
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true
+      }
     }
   }
 });
