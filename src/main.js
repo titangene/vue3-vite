@@ -1,10 +1,10 @@
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
 
-import './styles/main.scss';
-
 import App from './App.vue';
 import { quasar, router } from './plugins';
+
+import './styles/main.scss';
 
 // eslint-disable-next-line prettier/prettier
 createApp(App)
