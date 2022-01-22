@@ -6,10 +6,9 @@ import './styles/main.scss';
 import App from './App.vue';
 import { quasar, router } from './plugins';
 
-const app = createApp(App);
-
-app.use(createPinia());
-app.use(router);
-app.use(quasar);
-
-app.mount('#app');
+// eslint-disable-next-line prettier/prettier
+createApp(App)
+  .use(createPinia())
+  .use(quasar)
+  .use(router)
+  .mount('#app');
