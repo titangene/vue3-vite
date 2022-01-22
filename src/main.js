@@ -4,9 +4,7 @@ import { createPinia } from 'pinia';
 import './styles/main.scss';
 
 import App from './App.vue';
-import router from './plugins/vue-router';
-import quasar from './plugins/quasar';
-import './plugins/yup';
+import { quasar, router } from './plugins';
 
 const app = createApp(App);
 
