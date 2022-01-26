@@ -1,10 +1,7 @@
-<route>
-{
-  name: 'About',
-  meta: {
-    layout: '404.layout'
-  }
-}
+<route lang="yaml">
+name: 'About'
+meta:
+  layout: '404.layout'
 </route>
 
 <template>

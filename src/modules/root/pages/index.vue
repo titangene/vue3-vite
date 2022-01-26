@@ -1,7 +1,5 @@
-<route>
-{
-  name: 'Home'
-}
+<route lang="yaml">
+name: 'Home'
 </route>
 
 <script setup>

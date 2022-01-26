@@ -1,7 +1,5 @@
-<route>
-{
-  name: 'TranOpenEdit'
-}
+<route lang="yaml">
+name: 'TranOpenEdit'
 </route>
 
 <script>

@@ -1,7 +1,5 @@
-<route>
-{
-  name: 'WorkOpen'
-}
+<route lang="yaml">
+name: 'WorkOpen'
 </route>
 
 <template>

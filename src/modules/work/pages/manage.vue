@@ -1,7 +1,5 @@
-<route>
-{
-  name: 'WorkManage'
-}
+<route lang="yaml">
+name: 'WorkManage'
 </route>
 
 <template>

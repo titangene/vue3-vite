@@ -1,7 +1,5 @@
-<route>
-{
-  name: 'TranOpen'
-}
+<route lang="yaml">
+name: 'TranOpen'
 </route>
 
 <template>
