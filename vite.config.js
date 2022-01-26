@@ -7,6 +7,7 @@ import eslint from 'vite-plugin-eslint';
 import Pages from 'vite-plugin-pages';
 import Layouts from 'vite-plugin-vue-layouts';
 import legacy from '@vitejs/plugin-legacy';
+import Inspect from 'vite-plugin-inspect';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -44,6 +45,10 @@ export default defineConfig({
         'safari >= 13',
         'ios_saf >= 13'
       ]
+    }),
+    Inspect({
+      // change this to enable inspect for debugging
+      enabled: false
     })
   ],
   resolve: {
