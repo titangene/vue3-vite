@@ -2,8 +2,6 @@
   <nav>
     <RouterLink :to="{ name: 'Home' }">Home</RouterLink>
     <RouterLink :to="{ name: 'About' }">About</RouterLink>
-    <RouterLink :to="{ name: 'WorkOpen' }">WorkOpen</RouterLink>
-    <RouterLink :to="{ name: 'WorkManage' }">WorkManage</RouterLink>
   </nav>
 </template>
 
