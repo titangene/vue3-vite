@@ -1,8 +1,9 @@
+<script setup>
+import Navbar from '@/shared/components/Navbar.vue';
+</script>
+
 <template>
-  <nav>
-    <RouterLink :to="{ name: 'Home' }">Home</RouterLink>
-    <RouterLink :to="{ name: 'About' }">About</RouterLink>
-  </nav>
+  <Navbar />
   <h1>404</h1>
   <RouterView />
 </template>

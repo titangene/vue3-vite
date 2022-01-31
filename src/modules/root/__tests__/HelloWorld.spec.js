@@ -1,5 +1,5 @@
 import { mount } from '@cypress/vue';
-import HelloWorld from '../HelloWorld.vue';
+import HelloWorld from '@/modules/root/HelloWorld.vue';
 
 describe('HelloWorld', () => {
   it('playground', () => {
