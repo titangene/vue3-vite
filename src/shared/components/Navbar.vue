@@ -3,6 +3,7 @@
     <RouterLink :to="{ name: 'Home' }">Home</RouterLink>
     <RouterLink :to="{ name: 'About' }">About</RouterLink>
     <RouterLink :to="{ name: 'UsersIndex' }">Users</RouterLink>
+    <RouterLink :to="{ name: 'PostsIndex' }">Posts (nested routes)</RouterLink>
   </nav>
 </template>
 
