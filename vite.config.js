@@ -70,8 +70,8 @@ export default defineConfig({
       output: {
         // https://rollupjs.org/guide/en/#outputmanualchunks
         manualChunks(id) {
-          if (id.includes('src/modules/tran')) return 'tran';
-          if (id.includes('src/modules/work')) return 'work';
+          if (id.includes('src/modules/users')) return 'users';
+          if (id.includes('src/modules/posts')) return 'posts';
         }
       }
     },
