@@ -6,6 +6,7 @@ import { quasar, transformAssetUrls } from '@quasar/vite-plugin';
 import eslint from 'vite-plugin-eslint';
 import Pages from 'vite-plugin-pages';
 import Layouts from 'vite-plugin-vue-layouts';
+import svgLoader from 'vite-svg-loader';
 import legacy from '@vitejs/plugin-legacy';
 import Inspect from 'vite-plugin-inspect';
 
@@ -31,6 +32,7 @@ export default defineConfig({
       defaultLayout: 'Default.layout',
       layoutsDir: 'src/shared/layouts'
     }),
+    svgLoader(),
     legacy({
       targets: [
         '> 1%',
