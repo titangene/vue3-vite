@@ -5,11 +5,13 @@ name: 'Home'
 <script setup>
 import HelloWorld from '@/modules/root/HelloWorld.vue';
 import TheWelcome from '@/modules/root/TheWelcome.vue';
+
+import Logo from '@/assets/logo.svg';
 </script>
 
 <template>
   <div class="q-mb-lg">
-    <img class="logo" src="@/assets/logo.svg" alt="Vue logo" />
+    <Logo class="logo" alt="Vue logo" />
     <HelloWorld msg="You did it!" />
   </div>
   <TheWelcome />
