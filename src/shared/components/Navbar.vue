@@ -2,11 +2,6 @@
   <nav>
     <RouterLink :to="{ name: 'Home' }">Home</RouterLink>
     <RouterLink :to="{ name: 'About' }">About</RouterLink>
-    <RouterLink :to="{ name: 'TranOpen' }">TranOpen</RouterLink>
-    <RouterLink :to="{ name: 'TranOpenEdit', params: { id: 1 } }">
-      TranOpenEdit
-    </RouterLink>
-    <RouterLink :to="{ name: 'TranManage' }">TranManage</RouterLink>
     <RouterLink :to="{ name: 'WorkOpen' }">WorkOpen</RouterLink>
     <RouterLink :to="{ name: 'WorkManage' }">WorkManage</RouterLink>
   </nav>
