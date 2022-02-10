@@ -34,7 +34,7 @@ export default defineConfig(({ mode }) => {
       }),
       Layouts({
         defaultLayout: 'Default.layout',
-        layoutsDir: 'src/shared/layouts'
+        layoutsDirs: 'src/shared/layouts'
       }),
       svgLoader(),
       legacy({
