@@ -74,8 +74,11 @@ export default defineConfig(({ mode }) => {
         output: {
           // https://rollupjs.org/guide/en/#outputmanualchunks
           manualChunks(id) {
-            if (id.includes('src/modules/users')) return 'users';
-            if (id.includes('src/modules/posts')) return 'posts';
+            // 同 modules 內的檔案打包成同一個 chunk，
+            // 例如：src/modules/users 目錄內的檔案都被打包至 `users` chunk
+            const matched = id.match(/src\/modules\/(?<module>[^/]+?)\//);
+            const matchedModule = matched?.groups.module;
+            if (matchedModule) return matchedModule;
           }
         }
       },
