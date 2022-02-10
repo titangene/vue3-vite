@@ -1,13 +1,13 @@
 import { fileURLToPath } from 'url';
 
 import { defineConfig, loadEnv } from 'vite';
-import vue from '@vitejs/plugin-vue';
-import { quasar, transformAssetUrls } from '@quasar/vite-plugin';
-import eslint from 'vite-plugin-eslint';
+import Vue from '@vitejs/plugin-vue';
+import { quasar as Quasar, transformAssetUrls } from '@quasar/vite-plugin';
+import Eslint from 'vite-plugin-eslint';
 import Pages from 'vite-plugin-pages';
 import Layouts from 'vite-plugin-vue-layouts';
-import svgLoader from 'vite-svg-loader';
-import legacy from '@vitejs/plugin-legacy';
+import SvgLoader from 'vite-svg-loader';
+import Legacy from '@vitejs/plugin-legacy';
 import Inspect from 'vite-plugin-inspect';
 
 // https://vitejs.dev/config/
@@ -17,14 +17,14 @@ export default defineConfig(({ mode }) => {
   return {
     base: env.VITE_BASE_PUBLIC_PATH ?? '/',
     plugins: [
-      vue({
+      Vue({
         template: { transformAssetUrls }
       }),
-      quasar({
+      Quasar({
         autoImportComponentCase: 'pascal',
         sassVariables: false
       }),
-      eslint({
+      Eslint({
         cache: false,
         exclude: ['dist']
       }),
@@ -36,8 +36,8 @@ export default defineConfig(({ mode }) => {
         defaultLayout: 'Default.layout',
         layoutsDirs: 'src/shared/layouts'
       }),
-      svgLoader(),
-      legacy({
+      SvgLoader(),
+      Legacy({
         targets: [
           '> 1%',
           'last 2 versions',
